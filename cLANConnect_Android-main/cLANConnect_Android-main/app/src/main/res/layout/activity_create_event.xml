@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateEventActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Create your LAN Party"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="7dp"
+            android:text="Fill out fields below"
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Where:"/>
+            <EditText
+                android:id="@+id/whereText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:inputType="textPostalAddress"
+                android:hint="Ex. 1234 Lan Party Ln, GuildCity"
+                android:layout_marginStart="5dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Party Type:"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Is it private:"/>
+                <Switch
+                    android:id="@+id/privateSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Platforms:"/>
+            <RadioGroup
+                android:id="@+id/radGroup"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/PCrad"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:textStyle="bold"
+                    android:onClick="checkButton"
+                    android:textSize="18dp"
+                    android:text="    PC"/>
+
+                <RadioButton
+                    android:id="@+id/consRad"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:textStyle="bold"
+                    android:onClick="checkButton"
+                    android:textSize="18dp"
+                    android:text="    Console (Xbox/Playstation)"/>
+
+                <RadioButton
+                    android:id="@+id/bothRad"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:textStyle="bold"
+                    android:onClick="checkButton"
+                    android:textSize="18dp"
+                    android:text="    Both"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Games:"/>
+            <EditText
+                android:id="@+id/gamesText"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:hint="Seperate each game by coma-space"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="Name your LAN Party:"/>
+            <EditText
+                android:id="@+id/nameText"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint="Most Awesome Party"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:text="How many people:"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18dp"
+                    android:text="Player Count: "/>
+                <EditText
+                    android:id="@+id/numText"
+                    android:layout_width="60dp"
+                    android:inputType="number"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Description:"/>
+                <EditText
+                    android:id="@+id/descrText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="8"
+                    android:minLines="6"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine"
+                    android:hint="Tell us more about the party!"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/createCanc"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#009dff"
+                    android:textColor="#ffff"
+                    android:text="Cancel"
+                    android:background="@drawable/rounded_button"/>
+
+                <Button
+                    android:id="@+id/createMake"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#009dff"
+                    android:layout_marginStart="50dp"
+                    android:textColor="#ffff"
+                    android:text="Create"
+                    android:background="@drawable/rounded_button"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "436054286450",
+    "firebase_url": "https://clan-connect-app-714fc.firebaseio.com",
+    "project_id": "clan-connect-app-714fc",
+    "storage_bucket": "clan-connect-app-714fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436054286450:android:11964ee004563d9443e2eb",
+        "android_client_info": {
+          "package_name": "com.nullpointertech.cLANConnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436054286450-3qm7hj3hhsjhcq52vmjo49npn7q6maf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIxHJLyQt0ZiKyXfCGeMyKuxlEk0yNP-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436054286450-3qm7hj3hhsjhcq52vmjo49npn7q6maf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
